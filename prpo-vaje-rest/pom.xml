@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>si.fri.prpo</groupId>
+		<artifactId>prpo-vaje</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>prpo-vaje-rest</artifactId>
+	<packaging>war</packaging>
+	<dependencies>
+		<!-- Dependency for java ee -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Dependency for SWAGGER documentation -->
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-core</artifactId>
+			<version>1.5.10</version>
+		</dependency>
+
+		<!-- Dependency for REST interfaces -->
+		<dependency>
+			<groupId>si.fri.prpo</groupId>
+			<artifactId>prpo-vaje-vmesniki-ws</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- Dependency for STORTIVE module -->
+		<dependency>
+			<groupId>si.fri.prpo</groupId>
+			<artifactId>prpo-vaje-storitve</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.kongchen</groupId>
+				<artifactId>swagger-maven-plugin</artifactId>
+				<version>3.1.2</version>
+				<configuration>
+					<apiSources>
+						<apiSource>
+							<springmvc>false</springmvc>
+							<locations>si.fri.prpo.rest.v1.viri</locations>
+							<schemes>http</schemes>
+							<host>localhost</host>
+							<basePath>/v1</basePath>
+							<info>
+								<title>PRPO Rest Storitve</title>
+								<version>1.0.0</version>
+								<description>Storitev dostopa do podatkov v podatkovni bazi za izdelke, uporabnike in trgovine</description>
+								<contact>
+									<email>mj0073@student.uni-lj.si</email>
+								</contact>
+							</info>
+							<templatePath>${project.basedir}/src/main/resources/doc/v1/swagger/templates/strapdown.html.hbs</templatePath>
+							<outputPath>${project.basedir}/src/main/resources/doc/v1/swagger/html/document.html</outputPath>
+							<swaggerDirectory>${project.basedir}/src/main/resources/doc/v1/swagger</swaggerDirectory>
+						</apiSource>
+					</apiSources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
+</project>

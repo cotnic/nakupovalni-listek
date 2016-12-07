@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html>
+<title>API Document</title>
+
+<xmp theme="united" style="display:none;">
+#PRPO Rest Storitve
+
+
+## HTTP://localhost/v1
+
+
+Storitev dostopa do podatkov v podatkovni bazi za izdelke, uporabnike in trgovine
+
+
+[**Contact the developer**](mailto:mj0073@student.uni-lj.si)
+
+
+**Version** 1.0.0
+
+[**Terms of Service**]()
+
+
+
+
+
+
+
+
+
+
+
+
+# APIs
+
+
+## /izdelki
+
+
+### GET
+
+<a id="vrniIzdelke">Vrne vse izdelke.</a>
+
+Vrne celoten seznam izdelkov. Lahko ga tudi omejimo s ostranjevanjem.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>offset</th>
+    <td>query</td>
+    <td>no</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+<tr>
+    <th>limit</th>
+    <td>query</td>
+    <td>no</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+### PUT
+
+<a id="urediIzdelek">Uredi podani izdelek.</a>
+
+Vrne JSON izdelka, ki smo ga posodobili.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+
+
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+### POST
+
+
+<a id="dodajIzdelek">Ustvari nov izdelek.</a>
+
+Vrne izdelek, ki smo ga ustvarili v JSON formatu.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+
+
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## /izdelki/{id}
+
+
+### GET
+
+<a id="vrniIzdelek">Vrne izdelek glede na ID.</a>
+
+Vrne izdelek, ki si ga izberemo s pomočjo ID.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>id</th>
+    <td>path</td>
+    <td>yes</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+### DELETE
+
+<a id="izbrisiIzdelek">Izbriše izbrani izdelek.</a>
+
+Vrne ID izdelka, ki smo ga izbrisali.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>id</th>
+    <td>path</td>
+    <td>yes</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+
+
+
+## /trgovine
+
+
+### GET
+
+<a id="vrniTrgovine">Vrne vse trgovine.</a>
+
+Vrne celoten seznam trgovin. Lahko ga tudi omejimo s ostranjevanjem.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>offset</th>
+    <td>query</td>
+    <td>no</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+<tr>
+    <th>limit</th>
+    <td>query</td>
+    <td>no</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+### PUT
+
+<a id="urediTrgovino">Uredi podano trgovino.</a>
+
+Vrne JSON trgovine, ki smo jo posodobili.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+
+
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+### POST
+
+
+<a id="dodajTrgovino">Ustvari novo trgovino.</a>
+
+Vrne izdelek, ki smo ga ustvarili v JSON formatu.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+
+
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## /trgovine/{id}
+
+
+### GET
+
+<a id="vrniTrgovino">Vrne trgovino glede na ID.</a>
+
+Vrne trgovino, ki si jo izberemo s pomočjo ID.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>id</th>
+    <td>path</td>
+    <td>yes</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+### DELETE
+
+<a id="izbrisiTrgovino">Izbriše izbrano trgovino.</a>
+
+Vrne ID trgovine, ki smo jo izbrisali.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>id</th>
+    <td>path</td>
+    <td>yes</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+
+
+
+## /uporabniki
+
+
+### GET
+
+<a id="vrniUporabnike">Vrne vse uporabnike.</a>
+
+Vrne celoten seznam uporabnikov. Lahko ga tudi omejimo s ostranjevanjem.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>offset</th>
+    <td>query</td>
+    <td>no</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+<tr>
+    <th>limit</th>
+    <td>query</td>
+    <td>no</td>
+    <td></td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+### PUT
+
+<a id="urediUporabnika">Uredi podanega uporabnika.</a>
+
+Vrne JSON uporabnika, ki smo ga posodobili.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+
+
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+### POST
+
+
+<a id="dodajUporabnika">Ustvari novega uporabnika.</a>
+
+Vrne uporabnika, ki smo ga ustvarili, v JSON formatu.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+
+
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## /uporabniki/{id}
+
+
+### GET
+
+<a id="vrniUporabnika">Vrne uporabnika glede na ID.</a>
+
+Vrne uporabnika, ki si ga izberemo s pomočjo ID.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>id</th>
+    <td>path</td>
+    <td>yes</td>
+    <td>ID uporabnika, ki ga izberemo</td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+### DELETE
+
+<a id="izbrisiUporabnika">Uredi podanega uporabnika.</a>
+
+Vrne JSON uporabnika, ki smo ga posodobili.
+
+
+
+
+
+
+
+#### Request
+
+
+**Content-Type: ** application/json
+
+##### Parameters
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Located in</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th>Default</th>
+        <th>Schema</th>
+    </tr>
+
+
+
+<tr>
+    <th>id</th>
+    <td>path</td>
+    <td>yes</td>
+    <td>ID uporabnika, ki ga izbrišemo</td>
+    <td> - </td>
+
+    
+            <td>integer (int32)</td>
+    
+
+</tr>
+
+
+</table>
+
+
+
+#### Response
+
+**Content-Type: ** application/json
+
+
+| Status Code | Reason      | Response Model |
+|-------------|-------------|----------------|
+| default    | successful operation |  - |
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Definitions
+
+
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>

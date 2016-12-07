@@ -1,0 +1,13 @@
+DROP TABLE listek_izdelek CASCADE;
+
+DROP TABLE seznam CASCADE;
+
+DROP TABLE trgovina CASCADE;
+
+DROP TABLE izdelek CASCADE;
+
+DROP TABLE listek CASCADE;
+
+DROP TABLE uporabnik CASCADE;
+
+DROP TABLE lokacija CASCADE;

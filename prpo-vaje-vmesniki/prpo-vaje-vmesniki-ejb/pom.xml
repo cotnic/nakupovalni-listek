@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>si.fri.prpo</groupId>
+    <artifactId>prpo-vaje-vmesniki</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>prpo-vaje-vmesniki-ejb</artifactId>
+  <packaging>jar</packaging>
+  
+  <dependencies>
+  	
+  		<!-- Dependency for EJB javax -->
+  		<dependency>
+    		<groupId>javax.ejb</groupId>
+    		<artifactId>javax.ejb-api</artifactId>
+    		<version>3.2</version>
+    		<scope>provided</scope>
+		</dependency>
+		
+  		<!-- Dependency for JPA module -->
+  		<dependency>
+  			<groupId>si.fri.prpo</groupId>
+  			<artifactId>prpo-vaje-jpa</artifactId>
+  			<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  </dependencies>
+  <!-- Rešitev for: Error assembling EJB: META-INF/ejb-jar.xml is required for ejbVersion 2.x -->
+  <build>
+  <plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ejb-plugin</artifactId>
+        <configuration>
+            <ejbVersion>3.0</ejbVersion>
+        </configuration>
+    </plugin>
+  </plugins>
+</build>
+</project>

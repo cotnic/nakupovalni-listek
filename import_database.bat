@@ -1,0 +1,1 @@
+C:\Program Files\PostgreSQL\9.6\bin\psql.exe -d prpo -U postgres -f .\prpo-vaje-jdbc\sql\create_tables_nakupovalni.sql

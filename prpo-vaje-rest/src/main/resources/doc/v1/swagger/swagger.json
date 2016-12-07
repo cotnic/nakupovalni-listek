@@ -1,0 +1,313 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Storitev dostopa do podatkov v podatkovni bazi za izdelke, uporabnike in trgovine",
+    "version" : "1.0.0",
+    "title" : "PRPO Rest Storitve",
+    "contact" : {
+      "email" : "mj0073@student.uni-lj.si"
+    }
+  },
+  "host" : "localhost",
+  "basePath" : "/v1",
+  "tags" : [ {
+    "name" : "izdelki"
+  }, {
+    "name" : "trgovine"
+  }, {
+    "name" : "uporabniki"
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/izdelki" : {
+      "get" : {
+        "tags" : [ "izdelki" ],
+        "summary" : "Vrne vse izdelke.",
+        "description" : "Vrne celoten seznam izdelkov. Lahko ga tudi omejimo s ostranjevanjem.",
+        "operationId" : "vrniIzdelke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "izdelki" ],
+        "summary" : "Ustvari nov izdelek.",
+        "description" : "Vrne izdelek, ki smo ga ustvarili v JSON formatu.",
+        "operationId" : "dodajIzdelek",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "izdelki" ],
+        "summary" : "Uredi podani izdelek.",
+        "description" : "Vrne JSON izdelka, ki smo ga posodobili.",
+        "operationId" : "urediIzdelek",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/izdelki/{id}" : {
+      "get" : {
+        "tags" : [ "izdelki" ],
+        "summary" : "Vrne izdelek glede na ID.",
+        "description" : "Vrne izdelek, ki si ga izberemo s pomoèjo ID.",
+        "operationId" : "vrniIzdelek",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "izdelki" ],
+        "summary" : "Izbriše izbrani izdelek.",
+        "description" : "Vrne ID izdelka, ki smo ga izbrisali.",
+        "operationId" : "izbrisiIzdelek",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/trgovine" : {
+      "get" : {
+        "tags" : [ "trgovine" ],
+        "summary" : "Vrne vse trgovine.",
+        "description" : "Vrne celoten seznam trgovin. Lahko ga tudi omejimo s ostranjevanjem.",
+        "operationId" : "vrniTrgovine",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "trgovine" ],
+        "summary" : "Ustvari novo trgovino.",
+        "description" : "Vrne izdelek, ki smo ga ustvarili v JSON formatu.",
+        "operationId" : "dodajTrgovino",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "trgovine" ],
+        "summary" : "Uredi podano trgovino.",
+        "description" : "Vrne JSON trgovine, ki smo jo posodobili.",
+        "operationId" : "urediTrgovino",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/trgovine/{id}" : {
+      "get" : {
+        "tags" : [ "trgovine" ],
+        "summary" : "Vrne trgovino glede na ID.",
+        "description" : "Vrne trgovino, ki si jo izberemo s pomoèjo ID.",
+        "operationId" : "vrniTrgovino",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "trgovine" ],
+        "summary" : "Izbriše izbrano trgovino.",
+        "description" : "Vrne ID trgovine, ki smo jo izbrisali.",
+        "operationId" : "izbrisiTrgovino",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/uporabniki" : {
+      "get" : {
+        "tags" : [ "uporabniki" ],
+        "summary" : "Vrne vse uporabnike.",
+        "description" : "Vrne celoten seznam uporabnikov. Lahko ga tudi omejimo s ostranjevanjem.",
+        "operationId" : "vrniUporabnike",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        }, {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "uporabniki" ],
+        "summary" : "Ustvari novega uporabnika.",
+        "description" : "Vrne uporabnika, ki smo ga ustvarili, v JSON formatu.",
+        "operationId" : "dodajUporabnika",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "uporabniki" ],
+        "summary" : "Uredi podanega uporabnika.",
+        "description" : "Vrne JSON uporabnika, ki smo ga posodobili.",
+        "operationId" : "urediUporabnika",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    },
+    "/uporabniki/{id}" : {
+      "get" : {
+        "tags" : [ "uporabniki" ],
+        "summary" : "Vrne uporabnika glede na ID.",
+        "description" : "Vrne uporabnika, ki si ga izberemo s pomoèjo ID.",
+        "operationId" : "vrniUporabnika",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID uporabnika, ki ga izberemo",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "uporabniki" ],
+        "summary" : "Uredi podanega uporabnika.",
+        "description" : "Vrne JSON uporabnika, ki smo ga posodobili.",
+        "operationId" : "izbrisiUporabnika",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "path",
+          "description" : "ID uporabnika, ki ga izbrišemo",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int32"
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "successful operation"
+          }
+        }
+      }
+    }
+  }
+}

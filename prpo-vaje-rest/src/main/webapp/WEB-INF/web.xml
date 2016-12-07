@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>HtmlAuth</web-resource-name>
+			<url-pattern>/*</url-pattern>
+			<http-method>GET</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>Administrator</role-name>
+			<role-name>Uporabnik</role-name>
+			<role-name>Gost</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>ApplicationRealm</realm-name>
+	</login-config>
+	<security-role>
+			<role-name>Administrator</role-name>
+			<role-name>Uporabnik</role-name>
+			<role-name>Gost</role-name>
+	</security-role>
+</web-app>
