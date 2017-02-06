@@ -27,37 +27,43 @@ public class UpravljalecUporabnikovSB implements UpravljalecUporabnikovSBRemote,
     }
 
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator", "Gost"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator", "Gost"})
 	public List<Uporabnik> vrniVseUporabnike() {
 		return em.createNamedQuery("Uporabnik.findAll").getResultList();
 	}
 	
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator"})
 	public List<Uporabnik> vrniVseUporabnike(int offset, int limit) {
 		return em.createNamedQuery("Uporabnik.findAll").setFirstResult(offset).setMaxResults(limit).getResultList();
 	}
 
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator"})
 	public void shraniUporabnika(Uporabnik uporabnik) {
 		em.persist(uporabnik);
 	}
 	
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator"})
 	public void posodobiUporabnika(Uporabnik uporabnik) {
 		em.merge(uporabnik);
 	}
 	
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator"})
 	public void zbrisiUporabnika(int id) {
 		em.createNamedQuery("Uporabnik.deleteId").setParameter("id", id).getSingleResult();
 	}
 
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator"})
 	public Uporabnik vrniUporabnika(int id) {
 		return (Uporabnik)em.createNamedQuery("Uporabnik.findId").setParameter("id", id).getSingleResult();
 	}

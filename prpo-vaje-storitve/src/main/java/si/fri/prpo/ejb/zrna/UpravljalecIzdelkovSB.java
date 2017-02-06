@@ -27,25 +27,29 @@ public class UpravljalecIzdelkovSB implements UpravljalecIzdelkovSBRemote, Uprav
     }
 
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator", "Gost"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator", "Gost"})
 	public List<Izdelek> vrniVseIzdelke() {
 		return em.createNamedQuery("Izdelek.findAll").getResultList();
 	}
 	
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator"})
 	public List<Izdelek> vrniVseIzdelke(int offset, int limit) {
 		return em.createNamedQuery("Izdelek.findAll").setFirstResult(offset).setMaxResults(limit).getResultList();
 	}
 
 	@Override
-	@RolesAllowed({"Administrator"})
+	@PermitAll
+	//@RolesAllowed({"Administrator"})
 	public void shraniIzdelek(Izdelek izdelek) throws NeustrezenIzdelekException {
 		em.persist(izdelek);
 	}
 
 	@Override
-	@RolesAllowed({"Uporabniki", "Administrator"})
+	@PermitAll
+	//@RolesAllowed({"Uporabniki", "Administrator"})
 	public Izdelek vrniIzdelek(int id) {
 		Izdelek izdelek = (Izdelek)em.createNamedQuery("Izdelek.findId").setParameter("id", id).getSingleResult();
 		

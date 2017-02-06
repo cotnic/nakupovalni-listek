@@ -93,6 +93,17 @@
 				<version>0.0.1-SNAPSHOT</version>
 				<type>war</type>
 			</dependency>
+			<dependency>
+				<groupId>si.fri.prpo</groupId>
+				<artifactId>prpo-vaje-sheme</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>si.fri.prpo</groupId>
+				<artifactId>prpo-vaje-soap</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<type>war</type>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<modules>
@@ -103,5 +114,7 @@
 		<module>prpo-vaje-vmesniki</module>
 		<module>prpo-vaje-storitve</module>
 		<module>prpo-vaje-rest</module>
+		<module>prpo-vaje-sheme</module>
+		<module>prpo-vaje-soap</module>
 	</modules>
 </project>

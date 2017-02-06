@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://prpo.fri.si/sheme/izdelki/v1"
+	xmlns:tns="http://prpo.fri.si/sheme/izdelki/v1" elementFormDefault="qualified">
+
+<<<<<<< HEAD
+	<complexType name="IzdelkiListType">
+		<sequence>
+			<element name="IzdelekType" minOccurs="0" maxOccurs="unbounded">
+				<complexType>
+					<sequence>
+						<element name="idIzdelek" type="int" minOccurs="0"
+							maxOccurs="1" />
+						<element name="cena" type="double" minOccurs="0"
+							maxOccurs="1" />
+						<element name="kategorija" type="string" minOccurs="0"
+							maxOccurs="1" />
+						<element name="naziv" type="string" minOccurs="0"
+							maxOccurs="1" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+=======
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+	<complexType name="IzdelekType">
+		<sequence>
+			<element name="idIzdelek" type="int" minOccurs="0" maxOccurs="1" />
+			<element name="cena" type="double" minOccurs="0" maxOccurs="1" />
+<<<<<<< HEAD
+			<element name="kategorija" type="string" minOccurs="0"
+				maxOccurs="1" />
+=======
+			<element name="kategorija" type="string" minOccurs="0" maxOccurs="1" />
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+			<element name="naziv" type="string" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType>
+</schema>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://prpo.fri.si/sheme/izdelki/sporocila/v1"
+	xmlns:tns="http://prpo.fri.si/sheme/izdelki/sporocila/v1" xmlns:iz="http://prpo.fri.si/sheme/izdelki/v1"
+	elementFormDefault="qualified">
+<<<<<<< HEAD
+	<import schemaLocation="../../v1/IzdelkiTipi.xsd" namespace="http://prpo.fri.si/sheme/izdelki/v1" />
+=======
+
+	<import schemaLocation="../../v1/IzdelkiTipi.xsd" namespace="http://prpo.fri.si/sheme/izdelki/v1" />
+
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+	<complexType name="VrniIzdelekZahtevaSporocilo">
+		<sequence>
+			<element name="idIzdelek" type="int" minOccurs="1" maxOccurs="1" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="VrniIzdelekOdgovorSporocilo">
+		<sequence>
+			<element name="izdelek" type="iz:IzdelekType" minOccurs="1" maxOccurs="1" />
+		</sequence>
+	</complexType>
+	
+<<<<<<< HEAD
+	<complexType name="VrniIzdelkeZahtevaSporocilo">
+		<sequence>
+			<element name="idIzdelek" type="int" minOccurs="1" maxOccurs="1" />
+		</sequence>
+	</complexType>
+	
+	<complexType name="VrniIzdelkeOdgovorSporocilo">
+		<sequence>
+			<element name="izdelek" type="iz:IzdelkiListType" minOccurs="1" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	
+=======
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+</schema>

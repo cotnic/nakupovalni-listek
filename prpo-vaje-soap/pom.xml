@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>si.fri.prpo</groupId>
+		<artifactId>prpo-vaje</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>prpo-vaje-soap</artifactId>
+	<packaging>war</packaging>
+	<dependencies>
+
+		<dependency>
+			<groupId>si.fri.prpo</groupId>
+			<artifactId>prpo-vaje-vmesniki-ws</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>si.fri.prpo</groupId>
+			<artifactId>prpo-vaje-sheme</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- Dependency for java ee -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Dependency for STORTIVE module -->
+		<dependency>
+			<groupId>si.fri.prpo</groupId>
+			<artifactId>prpo-vaje-storitve</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>si.fri.prpo</groupId>
+			<artifactId>prpo-vaje-jpa</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<properties>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	</properties>
+</project>

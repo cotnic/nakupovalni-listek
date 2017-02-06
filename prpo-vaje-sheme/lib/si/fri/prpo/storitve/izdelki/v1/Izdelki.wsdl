@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://prpo.fri.si/storitve/izdelki/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Izdelki"
+	targetNamespace="http://prpo.fri.si/storitve/izdelki/v1">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://prpo.fri.si/storitve/izdelki/v1"
+			xmlns:tns="http://prpo.fri.si/storitve/izdelki/v1" xmlns:sporocila="http://prpo.fri.si/sheme/izdelki/sporocila/v1">
+			<xsd:import
+				schemaLocation="../../../sheme/izdelki/sporocila/v1/IzdelkiSporocila.xsd"
+				namespace="http://prpo.fri.si/sheme/izdelki/sporocila/v1" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+			<xsd:element name="vrniIzdelekRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="input"
+							type="sporocila:VrniIzdelekZahtevaSporocilo" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="vrniIzdelekResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="output"
+							type="sporocila:VrniIzdelekOdgovorSporocilo" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+<<<<<<< HEAD
+			<xsd:element name="vrniIzdelkeRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="input"
+							type="sporocila:VrniIzdelkeZahtevaSporocilo" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="vrniIzdelkeResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="output"
+							type="sporocila:VrniIzdelkeOdgovorSporocilo" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+=======
+		</xsd:schema>
+	</wsdl:types>
+
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+	<wsdl:message name="vrniIzdelek">
+		<wsdl:part element="tns:vrniIzdelekRequest" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="vrniIzdelekResponse">
+		<wsdl:part element="tns:vrniIzdelekResponse" name="parameters" />
+	</wsdl:message>
+<<<<<<< HEAD
+	
+	<wsdl:message name="vrniIzdelke">
+		<wsdl:part element="tns:vrniIzdelkeRequest" name="parameters" />
+	</wsdl:message>
+	<wsdl:message name="vrniIzdelkeResponse">
+		<wsdl:part element="tns:vrniIzdelkeResponse" name="parameters" />
+	</wsdl:message>
+=======
+
+
+
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+	<wsdl:portType name="IzdelkiPort">
+		<wsdl:operation name="vrniIzdelek">
+			<wsdl:input message="tns:vrniIzdelek" />
+			<wsdl:output message="tns:vrniIzdelekResponse" />
+		</wsdl:operation>
+<<<<<<< HEAD
+		
+		<wsdl:operation name="vrniIzdelke">
+			<wsdl:input message="tns:vrniIzdelke" />
+			<wsdl:output message="tns:vrniIzdelkeResponse" />
+		</wsdl:operation>
+=======
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+	</wsdl:portType>
+	
+	<wsdl:binding name="IzdelkiSOAPbinding" type="tns:IzdelkiPort">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="vrniIzdelek">
+			<soap:operation soapAction="http://prpo.fri.si/storitve/izdelki/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+<<<<<<< HEAD
+		<wsdl:operation name="vrniIzdelke">
+			<soap:operation soapAction="http://prpo.fri.si/storitve/izdelki/v1" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+=======
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
+	</wsdl:binding>
+	<wsdl:service name="Izdelki">
+		<wsdl:port binding="tns:IzdelkiSOAPbinding" name="IzdelkiSOAP">
+			<soap:address location="v1/Izdelki" />
+		</wsdl:port>
+	</wsdl:service>
+<<<<<<< HEAD
+</wsdl:definitions>
+=======
+</wsdl:definitions>
+>>>>>>> 46383f699818ac997decd325cac4840deec91862
