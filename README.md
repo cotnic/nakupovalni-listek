@@ -13,3 +13,5 @@ This is a project for getting to know different Java EE technologies. Those incl
 * Docker
 * RabbitMQ
 * JAX-WS
+
+It is a backend service for creating lists for shopping items.
